@@ -14,9 +14,18 @@ curso texto
 requisitos 
 
 Criar a conexão com SQLite (escola.db)
-criar a classe Alun
+criar a classe Aluno
 Criar as colunas usando column
 Criar a tabela no banco usando Base.metadata.create_all()
 Crie 8 alunos
 Salve os alunos no banco de dados
 Liste todos os alunos cadastrados.
+
+busque o aluno com id == 1
+atualize o curso para "Back-end com Gabriel"
+
+Busque um aluno
+remova esse aluno do banco
+faça as seguintes consultas:
+1-Buscar alunos com idade maior que 20
+2-buscar alunos do curso Desenvolvimento de Sistemas
