@@ -72,7 +72,7 @@ session.commit()
 # remova esse aluno do banco
 # aluno_id3 = session.query(Aluno).filter(Aluno.id ==3)
 
-# aluno_remover = session.query(Aluno).filter_by(id=2).first()
+# aluno_remover = session.query(Aluno).filter_by(id=3).first()
 # session.delete(aluno_remover)
 # session.commit()
 
@@ -81,5 +81,14 @@ session.commit()
 # faça as seguintes consultas:
 # 1-Buscar alunos com idade maior que 20
 # 2-buscar alunos do curso Desenvolvimento de Sistemas
+# Correção da consulta de idade > 20
+alunos_maiores = session.query(Aluno).filter(Aluno.idade > 20).all()
 
-aluno_maiorque = session.query(Aluno).filter(Aluno.idade >=20).all()
+print(Aluno.idade)
+
+alunos_cursods = session.query(Aluno).filter(Aluno.curso == "Desenvolvimento de Sistemas")
+print ("Alunos de Desenvolvimento de Sistemas")
+for aluno in alunos_cursods:
+  print(f"Nome: {aluno.nome} curso: {aluno.curso}")
+
+session.close()
